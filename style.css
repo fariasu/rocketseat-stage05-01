@@ -1,0 +1,121 @@
+:root {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+main {
+    background: #ffffff;
+    padding: 4.8rem 6.4rem 6.4rem;
+    border-radius: .5rem;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+.closed, .open {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    align-items: center;
+    width: 300px;
+    height: auto;
+}
+
+.closed img {
+    margin-top: 1.2.rem;
+}
+
+.closed img:hover {
+    animation: tilt-n-move-shaking .2s infinite alternate;
+}
+
+h1 {
+    color: #34355B;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+h3 {
+    color: #34355B;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.hide {
+    display: none;
+}
+
+#paper {
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    padding: 1rem;
+    animation: slide-fwd-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, 
+    scale 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+p{
+    font-family: "Dancing Script";
+    text-align: center;
+    color: #000;
+    font-size: 2.4rem;
+}
+
+button {
+    border-radius: 4px;
+    background: #FF9500;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    padding: 1.6rem;
+}
+
+
+@media (max-width: 768px){
+    main {
+        padding: 2.8rem 3.4rem 3.4rem;
+    }
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+
+@keyframes slide-fwd-top {
+    0% {
+        transform: translateZ(0) translateY(300px);
+    }
+    100% {
+        transform: translateZ(160px) translateY(0);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
